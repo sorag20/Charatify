@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Other Page</title>
+</head>
+<body>
+    <h1>Other Page</h1>
+    <ul>
+        {% for item in spotify_data %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <button onclick="window.location.href='/'">Go back</button>
+</body>
+</html>
