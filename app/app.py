@@ -1,7 +1,7 @@
 from flask import Flask,render_template
 from api import get_spotify_data
 
-app=Flask(__name__)
+app=Flask(__name__,static_folder=None)
 
 @app.route("/")
 def index():
