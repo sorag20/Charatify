@@ -1,2 +1,3 @@
 flask
-spotipy
+spotipy==2.23.0
+pandas==2.0.1

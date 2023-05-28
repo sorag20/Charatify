@@ -5,8 +5,46 @@
     <meta charset="utf-8" />
   </head>
   <body>
+
+    <script>
+      function redirectToPage() {
+        let acousticnessOption = document.getElementById('acousticness').value;
+        let energyOption = document.getElementById('energy').value;
+        let livenessOption = document.getElementById('liveness').value;
+        window.location.href = '/data?acousticnessOption='
+                             + acousticnessOption
+                             + '?energyOption=' + energyOption
+                             + '?livenessOption=' + livenessOption;
+      }
+    </script>
+    
     <h1>Hello flask ppppp</h1>
 
-    <button onclick="window.location.href='/data'">Go to Other Page</button>
+    <h2>acousticness</h2>
+    <select id="acousticness">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+      <option value="Default" selected>Default</option>
+    </select>
+
+    <h2>energy</h2>
+    <select id="energy">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+      <option value="Default" selected>Default</option>
+    </select>
+
+    <h2>liveness</h2>
+    <select id="liveness">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+      <option value="Default" selected>Default</option>
+    </select>
+    
+    <h2>Search</h2>
+    <button onclick=redirectToPage()>Go to Other Page</button>
   </body>
 </html>

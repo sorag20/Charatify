@@ -1,5 +1,5 @@
 from flask import Flask,render_template
-from api import get_spotify_data
+from api import get_top10_tracks
 
 app=Flask(__name__,static_folder=None)
 
@@ -9,8 +9,8 @@ def index():
 
 @app.route("/data")
 def data():
-    spotify_data = get_spotify_data()
-    return render_template('data.html', spotify_data=spotify_data)
+    top10_tracks = get_top10_tracks()
+    return render_template('data.html',top10_tracks=top10_tracks)
 
 if __name__ == '__main__':
     app.run(debug=True)
