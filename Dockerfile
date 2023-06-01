@@ -4,6 +4,7 @@ WORKDIR /usr/src/app
 
 ENV FLASK_APP=app.py
 ENV FLACK_ENV=development
+ENV FLASK_RUN_PORT=8000
 ENV FLASK_DEBUG=1
 COPY requirements.txt ./
 
