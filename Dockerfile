@@ -1,19 +1,14 @@
-FROM python:3.9
+FROM python:3.9.10
 
 WORKDIR /usr/src/app
 
-COPY requirements.txt .
-
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
-
 ENV FLASK_APP=app.py
-ENV FLASK_RUN_HOST=0.0.0.0
-ENV FLASK_RUN_PORT=5000
-ENV FLASK_ENV=development
+ENV FLACK_ENV=development
+ENV FLASK_RUN_PORT=8000
+ENV FLASK_DEBUG=1
+COPY requirements.txt ./
 
-# Reactアプリケーションのビルドファイルをマウントする
-COPY frontend/build /usr/src/app/static
+RUN pip install --upgrade pip
+RUN pip install --upgrade setuptools
+RUN pip install -r requirements.txt
 
-CMD ["flask", "run"]
