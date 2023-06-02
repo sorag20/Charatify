@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Other Page</title>
-</head>
-<body>
-    <h1>Other Page</h1>    
+  </head>
+  <body>
+    <h1>Other Page</h1>
     <ul>
-        {% for item in top10_tracks %}
-        <li>{{ item }}</li>
-        {% endfor %}
+      {% for item in top10_tracks %}
+      <li>{{ item }}</li>
+      {% endfor %}
     </ul>
+    <h2>{{recommended_song_params['name']}}</h2>
+    <a href={{recommended_song_params['track_href']}}>曲のリンク</a>
 
     <button onclick="window.location.href='/'">Go back</button>
-</body>
+  </body>
 </html>
