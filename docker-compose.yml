@@ -1,15 +1,25 @@
 version: '3.9'
 services:
-  app:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: 'frontend'
+    ports:
+      - '4000:4000'
+    volumes:
+      - ./frontend:/app
+    stdin_open: true
+
+  backend:
     restart: always
     build: .
     environment:
       FLASK_APP: 'app.py'
       FLASK_DEBUG: 1
-    container_name: 'app'
     tty: true
     ports:
-      - '3000:5000'
+      - '8000:8000'
     volumes:
       - ./app:/usr/src/app
     command: flask run --host=0.0.0.0

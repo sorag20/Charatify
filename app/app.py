@@ -1,5 +1,7 @@
 from flask import Flask,render_template,request
+
 from api import get_tracks_features
+
 from search import search_song
 
 app=Flask(__name__,static_folder=None)
@@ -13,6 +15,7 @@ def data():
     #比較項目のdict
     character={'acousticness':0,'danceability':0,'energy':0,
                'liveness':0,'tempo':0,'valence':0}
+
     character_popularity = {'popularity':0}
     #比較項目をcharacterに入れる
     for item in character.keys():

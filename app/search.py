@@ -22,3 +22,4 @@ def search_song(tracklist_with_features, character, character_popularity):
                 max_similarity=max(max_similarity,1/(1 + sum_of_sqrt))
             
     return  Recommended_song_params
+

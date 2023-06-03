@@ -1,0 +1,75 @@
+.folderIcon {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 241px;
+  height: 216px;
+  object-fit: cover;
+}
+.shindanChild {
+  position: absolute;
+  top: 223px;
+  left: 71px;
+  border-radius: 60px;
+  width: 1163px;
+  height: 610px;
+}
+.goResult {
+  position: absolute;
+  top: 642px;
+  left: 1062px;
+  display: inline-block;
+  width: 173px;
+  height: 129px;
+  mix-blend-mode: normal;
+}
+.httpsapplottiefilescomanIcon {
+  position: absolute;
+  height: 16.41%;
+  width: 12.2%;
+  top: 79.37%;
+  right: 6.29%;
+  bottom: 4.22%;
+  left: 81.51%;
+  border-radius: 95.5px;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.headphonesIcon {
+  position: absolute;
+  top: 0;
+  left: 1058px;
+  width: 215px;
+  height: 201px;
+  object-fit: cover;
+}
+.questions {
+  position: absolute;
+  top: 62px;
+  left: 468px;
+  font-size: var(--font-size-77xl);
+  letter-spacing: 0.05em;
+  font-family: var(--font-freehand);
+  color: var(--color-black);
+  display: inline-block;
+  width: 681px;
+  height: 180px;
+  text-shadow: 0 4px 4px #c08b58;
+}
+.shindan {
+  position: relative;
+  width: 100%;
+  height: 853px;
+  overflow: hidden;
+  background-image: url(/public/shindan@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  text-align: left;
+  font-size: 40px;
+  color: #000502;
+  font-family: var(--font-fresca);
+}
