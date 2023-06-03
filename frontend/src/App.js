@@ -1,25 +1,73 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  Routes,
+  Route,
+  useNavigationType,
+  useLocation,
+} from "react-router-dom";
+import TopPage from "./pages/TopPage";
+import Kekka from "./pages/Kekka";
+import Shindan from "./pages/Shindan";
+import ExportToCodeErrorsDelete from "./pages/ExportToCodeErrorsDelete";
+import { useEffect } from "react";
 
 function App() {
+  const action = useNavigationType();
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  useEffect(() => {
+    if (action !== "POP") {
+      window.scrollTo(0, 0);
+    }
+  }, [action, pathname]);
+
+  useEffect(() => {
+    let title = "";
+    let metaDescription = "";
+
+    switch (pathname) {
+      case "/":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/kekka":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/shindan":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/export-to-code-errors-delete-me-anytime":
+        title = "";
+        metaDescription = "";
+        break;
+    }
+
+    if (title) {
+      document.title = title;
+    }
+
+    if (metaDescription) {
+      const metaDescriptionTag = document.querySelector(
+        'head > meta[name="description"]'
+      );
+      if (metaDescriptionTag) {
+        metaDescriptionTag.content = metaDescription;
+      }
+    }
+  }, [pathname]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<TopPage />} />
+      <Route path="/kekka" element={<Kekka />} />
+      <Route path="/shindan" element={<Shindan />} />
+      <Route
+        path="/export-to-code-errors-delete-me-anytime"
+        element={<ExportToCodeErrorsDelete />}
+      />
+    </Routes>
   );
 }
-
 export default App;

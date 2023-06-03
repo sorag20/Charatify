@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fresca:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Freehand:wght@400&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-jetbrains-mono: "JetBrains Mono";
+  --font-freehand: Freehand;
+  --font-fresca: Fresca;
+
+  /* font sizes */
+  --font-size-45xl: 64px;
+  --font-size-77xl: 96px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+}
