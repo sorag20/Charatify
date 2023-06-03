@@ -17,6 +17,25 @@
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   -webkit-text-stroke: 1px #000;
 }
+.httpsapplottiefilescomanIcon {
+  position: absolute;
+  top: 686px;
+  left: 1049px;
+  width: 155px;
+  height: 134px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.playAgain {
+  position: absolute;
+  top: 627px;
+  left: 1018px;
+  font-size: 36px;
+  display: inline-block;
+  width: 269px;
+  height: 59px;
+  -webkit-text-stroke: 1px #000;
+}
 .kekka {
   position: relative;
   background-color: #c4c4c4;

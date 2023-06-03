@@ -4,10 +4,9 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import TopPage from "./pages/TopPage";
 import Kekka from "./pages/Kekka";
+import TopPage from "./pages/TopPage";
 import Shindan from "./pages/Shindan";
-import ExportToCodeErrorsDelete from "./pages/ExportToCodeErrorsDelete";
 import { useEffect } from "react";
 
 function App() {
@@ -38,10 +37,6 @@ function App() {
         title = "";
         metaDescription = "";
         break;
-      case "/export-to-code-errors-delete-me-anytime":
-        title = "";
-        metaDescription = "";
-        break;
     }
 
     if (title) {
@@ -61,12 +56,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<TopPage />} />
-      <Route path="/kekka" element={<Kekka />} />
       <Route path="/shindan" element={<Shindan />} />
-      <Route
-        path="/export-to-code-errors-delete-me-anytime"
-        element={<ExportToCodeErrorsDelete />}
-      />
+      <Route path="/kekka" element={<Kekka />} />
     </Routes>
   );
 }
