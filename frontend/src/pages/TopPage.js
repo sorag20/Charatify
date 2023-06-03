@@ -15,7 +15,6 @@ const TopPage = () => {
       <div className={styles.charatify}>Charatify</div>
       <div className={styles.cibspotify} />
       <img className={styles.vectorIcon} alt="" src="/vector.svg" />
-      <img className={styles.topPageChild} alt="" src="/frame-1.svg" />
       <img
         className={styles.httpsapplottiefilescomanIcon}
         alt=""

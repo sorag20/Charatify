@@ -30,16 +30,13 @@
   height: 233px;
   text-shadow: 20px 10px 50px rgba(255, 0, 229, 0.5);
 }
-.cibspotify {
+.cibspotify,
+.vectorIcon {
+  position: absolute;
   top: 206px;
   left: 806px;
   width: 70px;
   height: 78px;
-}
-.cibspotify,
-.topPageChild,
-.vectorIcon {
-  position: absolute;
   overflow: hidden;
 }
 .vectorIcon {
@@ -51,12 +48,6 @@
   left: 71.8%;
   max-width: 100%;
   max-height: 100%;
-}
-.topPageChild {
-  top: 603px;
-  left: 1160px;
-  width: 100px;
-  height: 100px;
 }
 .httpsapplottiefilescomanIcon {
   position: absolute;
