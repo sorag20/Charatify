@@ -11,6 +11,9 @@
       {% endfor %}
     </ul>
     <h2>{{recommended_song_params['name']}}</h2>
+
+    <h3>{{recommended_song_params['artist'][0]}}</h3>
+
     <a href={{recommended_song_params['track_href']}}>曲のリンク</a>
 
     <button onclick="window.location.href='/'">Go back</button>
