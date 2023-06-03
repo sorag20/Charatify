@@ -61,7 +61,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<TopPage />} />
-      <Route path="/kekka1" element={<Kekka />} />
+      <Route path="/kekka" element={<Kekka />} />
       <Route path="/shindan" element={<Shindan />} />
       <Route
         path="/export-to-code-errors-delete-me-anytime"
