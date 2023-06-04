@@ -1,4 +1,61 @@
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.button {
+  animation: pulse 2s ease infinite;
+  cursor: pointer;
+}
+
+@keyframes hoverAnimation {
+  0% {
+    transform: scale(1.1);
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    transform: scale(1.5);
+    filter: hue-rotate(90deg);
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: scale(1.1);
+    transform: rotate(-20deg);
+  }
+}
+
+.button:hover {
+  animation: hoverAnimation 2s infinite;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .rectangleIcon {
+  animation: pulse 8s ease infinite;
   position: absolute;
   top: 0;
   left: 0;
@@ -6,6 +63,7 @@
   height: 853px;
   object-fit: cover;
 }
+
 .charatify,
 .letsPlay {
   position: absolute;
