@@ -1,10 +1,13 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,make_response,jsonify
 
 from api import get_tracks_features
 
 from search import search_song
 
+from flask_cors import CORS
+
 app=Flask(__name__,static_folder=None)
+CORS(app)
 
 @app.route("/")
 def index():
@@ -37,7 +40,9 @@ def data():
         tracks_with_features = get_tracks_features(target_uri_lists[i])
         trackslist_with_features.append(tracks_with_features)
     
-    return render_template('data.html',trackslist_with_features=trackslist_with_features,recommended_song_params=search_song(trackslist_with_features,character,character_popularity))
+    recommended_song_params=search_song(trackslist_with_features,character,character_popularity)
+    
+    return jsonify(recommended_song_params)
 
 if __name__ == '__main__':
     app.run(debug=True)
