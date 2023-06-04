@@ -73,3 +73,62 @@
   color: #000502;
   font-family: var(--font-fresca);
 }
+
+.shindan .questionsContainer::-webkit-scrollbar {
+  width: 10px; /* scrollbar width */
+}
+
+.shindan .questionsContainer::-webkit-scrollbar-track {
+  background: #f1f1f1; /* scrollbar track color */
+}
+
+.shindan .questionsContainer::-webkit-scrollbar-thumb {
+  background: #036992; /* scrollbar thumb color */
+  border-radius: 10px; /* rounded scrollbar thumb */
+}
+
+.shindan .questionsContainer::-webkit-scrollbar-thumb:hover {
+  background: #e69317; /* scrollbar thumb color when hovering */
+}
+
+.shindan .questionsContainer {
+  position: absolute;
+  top: 63%;
+  color: #c08b58;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  height: 450px;
+  width: 70%;
+  overflow-y: auto;
+  padding: 0 15px;
+  text-align: left;
+  scrollbar-width: thin; /* for Firefox, "auto" or "thin" */
+  scrollbar-color: #8eb5ff #f1f1f1; /* for Firefox, thumb and track color */
+  direction: rtl;
+  overflow: auto;
+}
+
+.shindan .questionsContainer .question {
+  direction: ltr;
+}
+
+.shindan .question {
+  font-size: 15px; /* adjust this to fit your design */
+  color: #0d5572;
+  font-family: "Times New Roman";
+}
+
+.shindan .optionsContainer {
+  display: flex;
+  justify-content: flex-start; /* change this to flex-start to align options to the left */
+  flex-wrap: wrap; /* wrap items to the next line if necessary */
+  margin-left: 10px; /* add negative margin to compensate for the option margin */
+}
+
+.shindan .option {
+  font-size: 20px; /* adjust this to fit your design */
+  color: rgb(225, 126, 64);
+  margin: 0 10px 10px 0; /* add some margin to the option */
+  font-family: "Comic Sans MS";
+  margin-right: 30px; /* add some margin to the option */
+}
